@@ -5,13 +5,13 @@ module.exports = webpackConfigEnv => {
   const defaultConfig = singleSpaDefaults({
     orgName: "discostudebaker",
     projectName: "styleguide",
-    devServer: {
-      port: 8082
-    },
     webpackConfigEnv
   });
 
   return webpackMerge.smart(defaultConfig, {
+    devServer: {
+      port: 8082
+    },
     module: {
       rules: [
         {
